@@ -33,19 +33,18 @@ static bool scan_multiline_comment(TSLexer *lexer) {
   }
 
   while (1) {
+  woops:
     while (lexer->lookahead != 0 && lexer->lookahead != '<') {
       advance(lexer);
     }
 
     if (lexer->lookahead == '<') {
-      for (unsigned i = 0; i < 4; i++) {
+      for (unsigned i = 0; i < 5; i++) {
         if (lexer->lookahead != comment_end[i]) {
-          return false;
+          goto woops;
         }
         advance(lexer);
       }
-
-      advance(lexer);
 
       lexer->result_symbol = MULTILINE_COMMENT;
       lexer->mark_end(lexer);

@@ -11,6 +11,14 @@ Hope they don't get eaten
 ></*> can i do this tho <*/><
 
 ><//> Yes you can!
+
+></*>
+Hope you don't mind me putting a cat
+ /\_/\
+( o.o )
+ > ^ <
+<*/><
+
 --------------------------------------------------------------------------------
 
 (source_file
@@ -20,4 +28,5 @@ Hope they don't get eaten
       (one)
       (one)))
   (multiline_comment)
-  (comment))
+  (comment)
+  (multiline_comment))
